@@ -63,3 +63,30 @@ Exercises 2:
 1)The CircleBug is really similar to the Boxbug the only main difference is it only turns once unlike the Boxbug which turns twice
 
 
+Part 3
+-------------------------------------------------------------------------------
+
+1) You would access it by loc1.getRow();
+2) The value is false
+3) The value is (3,5)
+4) The value is South east
+5. You give in the direction and the starting location, the direction is changed in co ordinates after it will run & return the tile that has the transformations on the original.
+
+
+1)Gets the count of objects in a grid by getting the size of the ArrayList for get occupied Location and get a count of the empty locations in a bounding grid by subtracting that number from the total number of grid spaces.
+2)Use the isValid() method and add in the co-ordinates 
+3)The implementations would be found in the classes that use an interface such as the ones being spoke about
+4)No because ArrayLists are easier for adjusting values in an array and can have different values lengths based on the data is given to them.
+
+1)An actor has a color a direction and a location
+2)Once made an actor is facing north and is blue
+3)An interface does not let you declare instance variables or implement methods and the actors need both
+4)No, if the actor is already in the grid, it may not put itself in the grid again. When it runs it will give an IllegalStateException. Also if the actor has already been removed from the grid it cannot be removed a second time and will give the same issue.
+
+5)Use the setDirection method to turn the actor
+
+
+
+
+
+
