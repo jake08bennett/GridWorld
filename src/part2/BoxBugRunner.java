@@ -31,10 +31,12 @@ public class BoxBugRunner {
 	
 	public static void main(String[] args) {
 		ActorWorld world = new ActorWorld();
-		BoxBug alice = new BoxBug(6);
-		alice.setColor(Color.ORANGE);
-		BoxBug bob = new BoxBug(3);
-		world.add(new Location(7, 8), alice);
+		int [] dancingMoves = {2, 6, 8, 9, 11, 14, 2, 28};
+		
+		DancingBug bob = new DancingBug(dancingMoves);
+
+		
+		
 		world.add(new Location(5, 5), bob);
 		world.show();
 	}

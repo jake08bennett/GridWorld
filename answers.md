@@ -38,6 +38,28 @@ Exercises:
 
 3)To change the color of a bug, flower and rock i used the setColor method
 
-4)When i move the rock on top of the bug and off again the bug has disappeard.
+4)When i move the rock on top of the bug and off again the bug has disappeared.
+
+PART 2
+------------------------------------------------------------------------------------------------------------
+Set 2:
+
+1) The role of the instance variable "sidelength" is to hold the number for how big the sides are for the box.
+
+2)The role of the instance variable "steps" is to compare against "sidelength" in order to see if the bug has reached the number of steps to complete the square.
+
+3)There is 2 steps because each turn is 45 degrees, therefore it needs 2 to turn a 90 degree angle.
+ 
+4) Because the move function is inherited from the main class Bug.
+
+5)No there are no methods in which you change the variable sideLength so once the bug is made the side length can't be changed
+
+6)If something is blocking the path then it will change path.
+
+7)Once the bug has turned twice
+
+Exercises 2:
+
+1)The CircleBug is really similar to the Boxbug the only main difference is it only turns once unlike the Boxbug which turns twice
 
 
