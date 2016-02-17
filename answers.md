@@ -76,14 +76,43 @@ Part 3
 1)Gets the count of objects in a grid by getting the size of the ArrayList for get occupied Location and get a count of the empty locations in a bounding grid by subtracting that number from the total number of grid spaces.
 2)Use the isValid() method and add in the co-ordinates 
 3)The implementations would be found in the classes that use an interface such as the ones being spoke about
-4)No because ArrayLists are easier for adjusting values in an array and can have different values lengths based on the data is given to them.
+4)No because ArrayLists are easier for adjusting values in an array and can have different values/ lengths based on the data given to them.
 
 1)An actor has a color a direction and a location
 2)Once made an actor is facing north and is blue
 3)An interface does not let you declare instance variables or implement methods and the actors need both
 4)No, if the actor is already in the grid, it may not put itself in the grid again. When it runs it will give an IllegalStateException. Also if the actor has already been removed from the grid it cannot be removed a second time and will give the same issue.
-
 5)Use the setDirection method to turn the actor
+
+1)"if(!gr.isValid(next)) return false;"
+2)"Actor neighbor = gr.get(next); return (neighbor == null) || (neighbor instanceof Flower); " the or part of this code is to ensure it only moves if the spot is empty or has a flower.
+3)This program involves 2 methods which are invoked by the grid interface isValid and get, they are both used to check if the bug can move.
+4)The method is called getAdjacentLocation and then is used by the bug with its current direction to find its next possible location
+5)The methods used are getDirection, getGrid and getLocation
+6)The bug leaves the grid
+7)The variable loc is used in order to determine where to put the flower based on the old's bug location. Therefore the variable is needed.
+8)So you can identify which flower came from which bug
+9)
+10)These statements "Flower flower = new Flower(getColor()); flower.putSelfInGrid(gr, loc);"
+11) 4 turns as 180/45 = 4
+
+Group Activity
+--
+
+1a) It will step forward and then hop the next step
+1b) It will step forward then turn 90 degrees to the right
+1c) Turn 90 degrees right
+1d) Move then delete the other actor(kill it)
+1e) Move then delete the other jumper(kill it)
+1f) I don't believe so
+
+2a) The regular bug
+2b) The BoxBug is closest due to going in a straight line however no bug does the same thing
+2c)T It makes sense for the parameter to be the grid. No constructor is needed as it is simply moving forward till it cannot anymore.
+2d) act should because jumpers act different to the actors.
+2e) canJump to see what is in front of the bug and if it can jump
+2f) Conditions i will need to test include on the edge /one space away of the grid, facing the edge and surrounded by rocks/actors/flowers.
+ 
 
 
 
