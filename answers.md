@@ -90,32 +90,43 @@ Part 3
 4)The method is called getAdjacentLocation and then is used by the bug with its current direction to find its next possible location
 5)The methods used are getDirection, getGrid and getLocation
 6)The bug leaves the grid
-7)The variable loc is used in order to determine where to put the flower based on the old's bug location. Therefore the variable is needed.
-8)So you can identify which flower came from which bug
-9)
-10)These statements "Flower flower = new Flower(getColor()); flower.putSelfInGrid(gr, loc);"
-11) 4 turns as 180/45 = 4
-
-Group Activity
---
-
-1a) It will step forward and then hop the next step
-1b) It will step forward then turn 90 degrees to the right
-1c) Turn 90 degrees right
-1d) Move then delete the other actor(kill it)
-1e) Move then delete the other jumper(kill it)
-1f) I don't believe so
-
 2a) The regular bug
 2b) The BoxBug is closest due to going in a straight line however no bug does the same thing
 2c)T It makes sense for the parameter to be the grid. No constructor is needed as it is simply moving forward till it cannot anymore.
 2d) act should because jumpers act different to the actors.
 2e) canJump to see what is in front of the bug and if it can jump
-2f) Conditions i will need to test include on the edge /one space away of the grid, facing the edge and surrounded by rocks/actors/flowers.
- 
+2f) Conditions i will need to test include on the edge 
 
+part 4
+--
+set 7:
 
+1)act, getActors, processActors, getMoveLocations, selectMoveLocation, makeMove
+2) getActors, processActors, getMoveLocations, selectMoveLocation, makeMove
+3) depending on if the new critter subclass selects its actors from different locations than Critter class does, then yes it'll need to be overridden 
+4) it could make them all change colors,  It could eat all of the actors in its list, finally it could ask them all to move
+5)getmoveLocations gets the locations that the critter can move to in the areas surrounding it, selectMoveLocations selects the location for that critter to move to once one that is possible is selected and makeMove() moves the critter to the selected square.
+6)The Actor class has a default constructor and the critter class is an extension of actor.
 
+set 8:
+
+1)It's processActors method is different meaning that the Chameleon can move differently to critter
+2) The makemove of the chamelon critter first changes the direction of the critter to face its new location. Then it calls super.makeMove of the Critter class to actually move to the new location.
+3)It doesn't getActors differently from Critter so it doesn't need a new method and just needs to inherit it from critter.
+4)It processes the same list of actors that its parent class Critter. it doesnt need to be updated/overridden since ChameleonCritter does not define a new behavior for getActors
+5) The Actor class
+6) getGrid()
+
+set9:
+
+1) The class CrabCritter inherits the processActors method from Critter since it didn't override it.
+2) The CrabCritters getActors method only looks for actors that are immediately in front of the crab
+critter and to its right-front and left-front locations then eats them
+3)It needs to aim its claws therefore It needs to get the locations of the front, front-right, and front-left spaces in the directions it's moving to
+4)(2,5), (3,5) and (4,5)
+5) To begin with the two classes are similar because when critters and crab critters move, they do not turn in the direction that they are moving. On the other hand they are not similar because a crab critter will only move to its left or its right.
+6) When it hits another actor that it can't eat, it turns.
+7) The space is not validated if the space it wants to move to contains another CrabCritter
 
 
 
