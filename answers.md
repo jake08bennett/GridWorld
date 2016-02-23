@@ -67,34 +67,56 @@ Part 3
 -------------------------------------------------------------------------------
 
 1) You would access it by loc1.getRow();
+
 2) The value is false
+
 3) The value is (3,5)
+
 4) The value is South east
+
 5. You give in the direction and the starting location, the direction is changed in co ordinates after it will run & return the tile that has the transformations on the original.
 
 
 1)Gets the count of objects in a grid by getting the size of the ArrayList for get occupied Location and get a count of the empty locations in a bounding grid by subtracting that number from the total number of grid spaces.
+
 2)Use the isValid() method and add in the co-ordinates 
+
 3)The implementations would be found in the classes that use an interface such as the ones being spoke about
+
 4)No because ArrayLists are easier for adjusting values in an array and can have different values/ lengths based on the data given to them.
 
 1)An actor has a color a direction and a location
+
 2)Once made an actor is facing north and is blue
+
 3)An interface does not let you declare instance variables or implement methods and the actors need both
+
 4)No, if the actor is already in the grid, it may not put itself in the grid again. When it runs it will give an IllegalStateException. Also if the actor has already been removed from the grid it cannot be removed a second time and will give the same issue.
+
 5)Use the setDirection method to turn the actor
 
 1)"if(!gr.isValid(next)) return false;"
+
 2)"Actor neighbor = gr.get(next); return (neighbor == null) || (neighbor instanceof Flower); " the or part of this code is to ensure it only moves if the spot is empty or has a flower.
+
 3)This program involves 2 methods which are invoked by the grid interface isValid and get, they are both used to check if the bug can move.
+
 4)The method is called getAdjacentLocation and then is used by the bug with its current direction to find its next possible location
+
 5)The methods used are getDirection, getGrid and getLocation
+
 6)The bug leaves the grid
+
 2a) The regular bug
+
 2b) The BoxBug is closest due to going in a straight line however no bug does the same thing
+
 2c)T It makes sense for the parameter to be the grid. No constructor is needed as it is simply moving forward till it cannot anymore.
+
 2d) act should because jumpers act different to the actors.
+
 2e) canJump to see what is in front of the bug and if it can jump
+
 2f) Conditions i will need to test include on the edge 
 
 part 4
@@ -102,30 +124,46 @@ part 4
 set 7:
 
 1)act, getActors, processActors, getMoveLocations, selectMoveLocation, makeMove
+
 2) getActors, processActors, getMoveLocations, selectMoveLocation, makeMove
+
 3) depending on if the new critter subclass selects its actors from different locations than Critter class does, then yes it'll need to be overridden 
+
 4) it could make them all change colors,  It could eat all of the actors in its list, finally it could ask them all to move
+
 5)getmoveLocations gets the locations that the critter can move to in the areas surrounding it, selectMoveLocations selects the location for that critter to move to once one that is possible is selected and makeMove() moves the critter to the selected square.
+
 6)The Actor class has a default constructor and the critter class is an extension of actor.
 
 set 8:
 
 1)It's processActors method is different meaning that the Chameleon can move differently to critter
+
 2) The makemove of the chamelon critter first changes the direction of the critter to face its new location. Then it calls super.makeMove of the Critter class to actually move to the new location.
+
 3)It doesn't getActors differently from Critter so it doesn't need a new method and just needs to inherit it from critter.
+
 4)It processes the same list of actors that its parent class Critter. it doesnt need to be updated/overridden since ChameleonCritter does not define a new behavior for getActors
+
 5) The Actor class
+
 6) getGrid()
 
 set9:
 
 1) The class CrabCritter inherits the processActors method from Critter since it didn't override it.
+
 2) The CrabCritters getActors method only looks for actors that are immediately in front of the crab
 critter and to its right-front and left-front locations then eats them
+
 3)It needs to aim its claws therefore It needs to get the locations of the front, front-right, and front-left spaces in the directions it's moving to
+
 4)(2,5), (3,5) and (4,5)
+
 5) To begin with the two classes are similar because when critters and crab critters move, they do not turn in the direction that they are moving. On the other hand they are not similar because a crab critter will only move to its left or its right.
+
 6) When it hits another actor that it can't eat, it turns.
+
 7) The space is not validated if the space it wants to move to contains another CrabCritter
 
 
