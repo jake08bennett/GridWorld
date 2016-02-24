@@ -33,7 +33,7 @@ import java.util.ArrayList;
  */
 public class ChameleonCritter extends Critter {
 	
-	private static double Value_for_Making_Dark = 0.05;
+	private static final double DARKENING_VALUE = 0.05;
 	/**
 	 * Randomly selects a neighbor and changes this critter's color to be the
 	 * same as that neighbor's. If there are no neighbors, no action is taken.
@@ -42,10 +42,10 @@ public class ChameleonCritter extends Critter {
 	public void processActors(ArrayList<Actor> actors) {
 		int n = actors.size();
 		if (n == 0) {
-			 Color chameleon = getColor();
-		        int new_green_value = (int) (chameleon.getGreen() * (1 - Value_for_Making_Dark));
-		        int new_red_value = (int) (chameleon.getRed() * (1 - Value_for_Making_Dark));
-		        int new_blue_value = (int) (chameleon.getBlue() * (1 - Value_for_Making_Dark));
+			 Color c = getColor();
+		        int new_green_value = (int) (c.getGreen() * (1 - DARKENING_VALUE));
+		        int new_red_value = (int) (c.getRed() * (1 - DARKENING_VALUE));
+		        int new_blue_value = (int) (c.getBlue() * (1 - DARKENING_VALUE));
 		        
 		        setColor(new Color(new_red_value, new_green_value, new_blue_value));
 		        
