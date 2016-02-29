@@ -11,6 +11,8 @@ public class RockHoundRunner {
 		ActorWorld world = new ActorWorld();
 		world.add(new Location(1, 8), new Rock());
 		world.add(new Location(3, 3), new Rock());
+		world.add(new Location(6, 1), new Rock());
+		world.add(new Location(9, 1), new Rock());
 		world.add(new Location(4, 4), new RockHound());
 		world.add(new Location(2, 7), new RockHound());
 		world.show();
